@@ -4,7 +4,7 @@ import { Button, Form, Modal } from 'react-bootstrap';
 import * as Yup from 'yup'
 import ClienteTable from '../components/ClienteTable';
 
-const CadastroCliente = () => {
+const ClienteYupFormik = () => {
 
   const schema = Yup.object().shape({
     nome: Yup.string().trim().min(15).max(50).required('Nome é obrigatório'),
@@ -37,7 +37,7 @@ const CadastroCliente = () => {
   }, []);
 
   useEffect(() => {
-    console.log('Cliente adicionado!');
+    console.log('Novo cliente adicionado!');
   }, [clientes]);
 
   const handleSubmit = (values) => {
@@ -51,14 +51,14 @@ const CadastroCliente = () => {
       },
     })
       .then((response) => {
-        console.log('Cliente Cadastrado com sucesso!');
+        console.log('Cliente cadastrado feito com sucesso!');
 
         setClientes([...clientes, dadosNovoCliente]);
 
         setShow(false);
       })
       .catch((error) => {
-        console.log('Não foi possivel cadastrar');
+        console.log('Não foi possível fazer o cadastro!');
       });
   };
 
@@ -138,4 +138,4 @@ const CadastroCliente = () => {
   );
 }
 
-export default CadastroCliente;
+export default ClienteYupFormik;
