@@ -27,7 +27,7 @@ const ClienteYupFormik = () => {
   }
 
   useEffect(() => {
-    fetch('http://localhost:3000/clientes')
+    fetch('http://localhost:3000/cliente')
       .then((res) => {
         res.json().then((data) => {
           setClientes([...data]);
@@ -43,7 +43,7 @@ const ClienteYupFormik = () => {
   const handleSubmit = (values) => {
     let dadosNovoCliente = { ...values };
 
-    fetch('http://localhost:3000/clientes', {
+    fetch('http://localhost:3000/cliente', {
       method: 'POST',
       body: JSON.stringify(dadosNovoCliente),
       headers: {
@@ -51,7 +51,7 @@ const ClienteYupFormik = () => {
       },
     })
       .then((response) => {
-        console.log('Cliente cadastrado feito com sucesso!');
+        console.log('Cadastrado feito com sucesso!');
 
         setClientes([...clientes, dadosNovoCliente]);
 
