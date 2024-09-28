@@ -23,27 +23,27 @@
           }
     ],
     
-    "clientes": [
+    "cliente": [
         {
-            "id": "7agh3",
-            "nome": "lucas",
-            "email": "lucas@gmail.com",
+            "id": "01",
+            "nome": "Ricardo",
+            "email": "ricardo@gmail.com",
             "nascimento": "31/07/2003",
-            "cep": "67980-100"
+            "cep": "54240-100"
         },
         {
-            "id": "hj67e",
+            "id": "02",
             "nome": "Maria",
             "email": "mariasilva@gmail.com",
-            "nascimento": "05/07/2011",
-            "cep": "583930-000"
+            "nascimento": "26/02/2013",
+            "cep": "42410-000"
         },
         {
-            "id": "uit8i",
-            "nome": "Ana",
-            "email": "ana@gmail.com",
-            "nascimento": "10/06/2002",
-            "cep": "58897-456"
+            "id": "02",
+            "nome": "Júlia",
+            "email": "julia@gmail.com",
+            "nascimento": "15/03/2001",
+            "cep": "52097-116"
         }
     ]
 }

@@ -71,7 +71,7 @@ const ClienteYupFormik = () => {
   return (
     <>
       <Button className="m-2" variant="primary" onClick={handleShow}>
-        Adicionar cliente
+        +
       </Button>
 
       <ClienteTable clientes={clientes}></ClienteTable>
@@ -87,8 +87,9 @@ const ClienteYupFormik = () => {
               <Form.Control
                 onChange={formik.handleChange}
                 type="text"
-                placeholder="Digite o título"
-                name="titulo"
+                placeholder="Digite o nome"
+                name="nome"
+                value={formik.values.nome}
               />
               <span>{formik.errors.nome}</span>
             </Form.Group>
@@ -97,8 +98,9 @@ const ClienteYupFormik = () => {
               <Form.Control
                 onChange={formik.handleChange}
                 type="text"
-                placeholder="Digite a descrição"
-                name="descricao"
+                placeholder="Digite o E-mail"
+                name="email"
+                value={formik.values.email}
               />
               <span>{formik.errors.email}</span>
             </Form.Group>
@@ -107,9 +109,9 @@ const ClienteYupFormik = () => {
               <Form.Control
                 onChange={formik.handleChange}
                 type="text"
-                placeholder="Digite o valor"
-                name="valor"
-                
+                placeholder="Digite a data de nascimento"
+                name="nascimento"
+                value={formik.values.nascimento}
               />
               <span>{formik.errors.nascimento}</span>
             </Form.Group>
@@ -118,8 +120,9 @@ const ClienteYupFormik = () => {
               <Form.Control
                 onChange={formik.handleChange}
                 type="text"
-                placeholder="Digite o endereço da imagem."
-                name="imagemUrl"
+                placeholder="Digite o CEP"
+                name="cep"
+                value={formik.values.cep}
               />
               <span>{formik.errors.cep}</span>
             </Form.Group>
